@@ -1,0 +1,348 @@
+
+;; Function __static_initialization_and_destruction_0.constprop (_Z41__static_initialization_and_destruction_0ii.constprop.0, funcdef_no=2280, decl_uid=49870, cgraph_uid=1024, symbol_order=1202) (executed once)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 3 n_edges 2 count 3 (    1)
+Searching for mode conversion candidates...
+There are no candidates for optimization.
+Total insns converted: 0
+starting the processing of deferred insns
+ending the processing of deferred insns
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+__static_initialization_and_destruction_0.constprop
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp] 16 [argp] 19 [frame]
+;;  regular block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 16 [argp] 19 [frame] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 36 [r8] 37 [r9]
+;;  exit block uses 	 6 [bp] 7 [sp] 19 [frame]
+;;  regs ever live 	 0 [ax] 1 [dx] 4 [si] 5 [di] 7 [sp]
+;;  ref usage 	r0={3d} r1={4d,1u} r2={3d} r4={4d,1u} r5={5d,2u} r6={1d,2u} r7={1d,4u} r8={2d} r9={2d} r10={2d} r11={2d} r12={2d} r13={2d} r14={2d} r15={2d} r16={1d,1u} r17={2d} r18={2d} r19={1d,2u} r20={3d} r21={3d} r22={3d} r23={3d} r24={3d} r25={3d} r26={3d} r27={3d} r28={2d} r29={2d} r30={2d} r31={2d} r32={2d} r33={2d} r34={2d} r35={2d} r36={3d} r37={3d} r38={2d} r39={2d} r44={2d} r45={2d} r46={2d} r47={2d} r48={2d} r49={2d} r50={2d} r51={2d} r52={2d} r53={2d} r54={2d} r55={2d} r56={2d} r57={2d} r58={2d} r59={2d} r60={2d} r61={2d} r62={2d} r63={2d} r64={2d} r65={2d} r66={2d} r67={2d} r68={2d} r69={2d} r70={2d} r71={2d} r72={2d} r73={2d} r74={2d} r75={2d} r82={1d,2u} r83={1d,1u} r86={1d,1u} 
+;;    total ref usage 177{160d,17u,0e} in 9{7 regular + 2 call} insns.
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:DI 82)
+        (symbol_ref:DI ("_ZStL8__ioinit") [flags 0x2]  <var_decl 0x7f584a229c60 __ioinit>)) "/usr/include/c++/11/iostream":74:25 74 {*movdi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg:DI 5 di)
+        (reg/f:DI 82)) "/usr/include/c++/11/iostream":74:25 74 {*movdi_internal}
+     (expr_list:REG_DEAD (reg/f:DI 82)
+        (expr_list:REG_EQUAL (symbol_ref:DI ("_ZStL8__ioinit") [flags 0x2]  <var_decl 0x7f584a229c60 __ioinit>)
+            (nil))))
+(call_insn 7 6 8 2 (call (mem:QI (symbol_ref:DI ("_ZNSt8ios_base4InitC1Ev") [flags 0x41]  <function_decl 0x7f584a520200 __ct_comp >) [0 __ct_comp  S1 A8])
+        (const_int 0 [0])) "/usr/include/c++/11/iostream":74:25 813 {*call}
+     (expr_list:REG_DEAD (reg:DI 5 di)
+        (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSt8ios_base4InitC1Ev") [flags 0x41]  <function_decl 0x7f584a520200 __ct_comp >)
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 8 7 9 2 (set (reg/f:DI 83)
+        (symbol_ref:DI ("__dso_handle") [flags 0x42]  <var_decl 0x7f5849dbb900 __dso_handle>)) "/usr/include/c++/11/iostream":74:25 74 {*movdi_internal}
+     (nil))
+(insn 9 8 11 2 (set (reg:DI 1 dx)
+        (reg/f:DI 83)) "/usr/include/c++/11/iostream":74:25 74 {*movdi_internal}
+     (expr_list:REG_DEAD (reg/f:DI 83)
+        (expr_list:REG_EQUAL (symbol_ref:DI ("__dso_handle") [flags 0x42]  <var_decl 0x7f5849dbb900 __dso_handle>)
+            (nil))))
+(insn 11 9 12 2 (set (reg:DI 4 si)
+        (reg/f:DI 82)) "/usr/include/c++/11/iostream":74:25 74 {*movdi_internal}
+     (expr_list:REG_DEAD (reg/f:DI 84)
+        (expr_list:REG_EQUAL (symbol_ref:DI ("_ZStL8__ioinit") [flags 0x2]  <var_decl 0x7f584a229c60 __ioinit>)
+            (nil))))
+(insn 12 11 14 2 (set (reg:DI 86)
+        (mem/u/c:DI (const:DI (unspec:DI [
+                        (symbol_ref:DI ("_ZNSt8ios_base4InitD1Ev") [flags 0x41]  <function_decl 0x7f584a520400 __dt_comp >)
+                    ] UNSPEC_GOTPCREL)) [25  S8 A8])) "/usr/include/c++/11/iostream":74:25 74 {*movdi_internal}
+     (nil))
+(insn 14 12 15 2 (set (reg:DI 5 di)
+        (reg:DI 86)) "/usr/include/c++/11/iostream":74:25 74 {*movdi_internal}
+     (expr_list:REG_DEAD (reg:DI 85)
+        (expr_list:REG_EQUAL (symbol_ref:DI ("_ZNSt8ios_base4InitD1Ev") [flags 0x41]  <function_decl 0x7f584a520400 __dt_comp >)
+            (nil))))
+(call_insn/j 15 14 0 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__cxa_atexit") [flags 0x41]  <function_decl 0x7f5849dfc400 __cxa_atexit>) [0 __cxa_atexit S1 A8])
+            (const_int 0 [0]))) "/usr/include/c++/11/iostream":74:25 828 {*sibcall_value}
+     (expr_list:REG_DEAD (reg:DI 5 di)
+        (expr_list:REG_DEAD (reg:DI 4 si)
+            (expr_list:REG_DEAD (reg:DI 1 dx)
+                (expr_list:REG_UNUSED (reg:SI 0 ax)
+                    (expr_list:REG_CALL_DECL (symbol_ref:DI ("__cxa_atexit") [flags 0x41]  <function_decl 0x7f5849dfc400 __cxa_atexit>)
+                        (expr_list:REG_EH_REGION (const_int 0 [0])
+                            (nil)))))))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+
+;; Function main (main, funcdef_no=1778, decl_uid=44906, cgraph_uid=512, symbol_order=542) (executed once)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 9 n_edges 10 count 10 (  1.1)
+Searching for mode conversion candidates...
+There are no candidates for optimization.
+Total insns converted: 0
+starting the processing of deferred insns
+ending the processing of deferred insns
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+main
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp] 16 [argp] 19 [frame]
+;;  regular block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 16 [argp] 19 [frame] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 36 [r8] 37 [r9]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 19 [frame]
+;;  regs ever live 	 0 [ax] 4 [si] 5 [di] 7 [sp] 17 [flags]
+;;  ref usage 	r0={6d,3u} r1={5d} r2={5d} r4={8d,3u} r5={8d,3u} r6={1d,8u} r7={1d,12u} r8={4d} r9={4d} r10={4d} r11={4d} r12={4d} r13={4d} r14={4d} r15={4d} r16={1d,7u} r17={12d,3u} r18={4d} r19={1d,12u,1e} r20={5d} r21={5d} r22={5d} r23={5d} r24={5d} r25={5d} r26={5d} r27={5d} r28={4d} r29={4d} r30={4d} r31={4d} r32={4d} r33={4d} r34={4d} r35={4d} r36={5d} r37={5d} r38={4d} r39={4d} r44={4d} r45={4d} r46={4d} r47={4d} r48={4d} r49={4d} r50={4d} r51={4d} r52={4d} r53={4d} r54={4d} r55={4d} r56={4d} r57={4d} r58={4d} r59={4d} r60={4d} r61={4d} r62={4d} r63={4d} r64={4d} r65={4d} r66={4d} r67={4d} r68={4d} r69={4d} r70={4d} r71={4d} r72={4d} r73={4d} r74={4d} r75={4d} r84={1d,1u} r85={1d,1u} r86={3d,2u} r87={2d,3u} r88={1d,2u} r91={1d,1u} r92={1d,1u} r93={1d,1u} r95={1d,1u} 
+;;    total ref usage 379{314d,64u,1e} in 31{27 regular + 4 call} insns.
+(note 8 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 8 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 2 10 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                        (const_int -8 [0xfffffffffffffff8])) [14 D.49887+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (const_int 40 [0x28]) [9 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "factorial.cpp":4:1 1159 {stack_protect_set_1_di}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (nil)))
+(insn 10 4 11 2 (parallel [
+            (set (reg/f:DI 91)
+                (plus:DI (reg/f:DI 19 frame)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "factorial.cpp":6:9 210 {*adddi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (nil)))
+(insn 11 10 12 2 (set (reg:DI 4 si)
+        (reg/f:DI 91)) "factorial.cpp":6:9 74 {*movdi_internal}
+     (expr_list:REG_DEAD (reg/f:DI 91)
+        (expr_list:REG_EQUAL (plus:DI (reg/f:DI 19 frame)
+                (const_int -12 [0xfffffffffffffff4]))
+            (nil))))
+(insn 12 11 13 2 (set (reg/f:DI 92)
+        (symbol_ref:DI ("_ZSt3cin") [flags 0x40]  <var_decl 0x7f584a229e10 cin>)) "factorial.cpp":6:9 74 {*movdi_internal}
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 5 di)
+        (reg/f:DI 92)) "factorial.cpp":6:9 74 {*movdi_internal}
+     (expr_list:REG_DEAD (reg/f:DI 92)
+        (expr_list:REG_EQUAL (symbol_ref:DI ("_ZSt3cin") [flags 0x40]  <var_decl 0x7f584a229e10 cin>)
+            (nil))))
+(call_insn 14 13 15 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZNSirsERi") [flags 0x41]  <function_decl 0x7f584a157e00 operator>>>) [0 operator>> S1 A8])
+            (const_int 0 [0]))) "factorial.cpp":6:9 824 {*call_value}
+     (expr_list:REG_DEAD (reg:DI 5 di)
+        (expr_list:REG_DEAD (reg:DI 4 si)
+            (expr_list:REG_UNUSED (reg:DI 0 ax)
+                (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSirsERi") [flags 0x41]  <function_decl 0x7f584a157e00 operator>>>)
+                    (nil)))))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 15 14 18 2 (set (reg:SI 88 [ n.0_14 ])
+        (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [5 n+0 S4 A32])) "factorial.cpp":9:11 75 {*movsi_internal}
+     (nil))
+(insn 18 15 19 2 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 88 [ n.0_14 ])
+            (const_int 1 [0x1]))) "factorial.cpp":9:11 11 {*cmpsi_1}
+     (nil))
+(jump_insn 19 18 20 2 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 57)
+            (pc))) "factorial.cpp":9:11 806 {*jcc}
+     (expr_list:REG_DEAD (reg:CCGC 17 flags)
+        (int_list:REG_BR_PROB 118111604 (nil)))
+ -> 57)
+(note 20 19 21 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 5 3 (parallel [
+            (set (reg:SI 84 [ _6 ])
+                (plus:SI (reg:SI 88 [ n.0_14 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) 209 {*addsi_1}
+     (expr_list:REG_DEAD (reg:SI 88 [ n.0_14 ])
+        (expr_list:REG_UNUSED (reg:CC 17 flags)
+            (nil))))
+(insn 5 21 6 3 (set (reg/v:SI 86 [ f ])
+        (const_int 1 [0x1])) "factorial.cpp":8:4 75 {*movsi_internal}
+     (nil))
+(insn 6 5 25 3 (set (reg/v:SI 87 [ i ])
+        (const_int 2 [0x2])) "factorial.cpp":7:4 75 {*movsi_internal}
+     (nil))
+(code_label 25 6 22 4 6 (nil) [1 uses])
+(note 22 25 23 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 4 (parallel [
+            (set (reg/v:SI 86 [ f ])
+                (mult:SI (reg/v:SI 86 [ f ])
+                    (reg/v:SI 87 [ i ])))
+            (clobber (reg:CC 17 flags))
+        ]) "factorial.cpp":11:5 408 {*mulsi3_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (nil)))
+(insn 24 23 26 4 (parallel [
+            (set (reg/v:SI 87 [ i ])
+                (plus:SI (reg/v:SI 87 [ i ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "factorial.cpp":12:5 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (nil)))
+(insn 26 24 27 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 84 [ _6 ])
+            (reg/v:SI 87 [ i ]))) "factorial.cpp":9:11 11 {*cmpsi_1}
+     (nil))
+(jump_insn 27 26 57 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 25)
+            (pc))) "factorial.cpp":9:11 806 {*jcc}
+     (expr_list:REG_DEAD (reg:CCZ 17 flags)
+        (int_list:REG_BR_PROB 955630228 (nil)))
+ -> 25)
+      ; pc falls through to BB 7
+(code_label 57 27 56 6 8 (nil) [1 uses])
+(note 56 57 7 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 7 56 28 6 (set (reg/v:SI 86 [ f ])
+        (const_int 1 [0x1])) "factorial.cpp":8:4 75 {*movsi_internal}
+     (nil))
+(code_label 28 7 29 7 5 (nil) [0 uses])
+(note 29 28 30 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 7 (set (reg:SI 4 si)
+        (reg/v:SI 86 [ f ])) "factorial.cpp":14:10 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg/v:SI 86 [ f ])
+        (nil)))
+(insn 31 30 32 7 (set (reg/f:DI 93)
+        (symbol_ref:DI ("_ZSt4cout") [flags 0x40]  <var_decl 0x7f584a229ea0 cout>)) "factorial.cpp":14:10 74 {*movdi_internal}
+     (nil))
+(insn 32 31 33 7 (set (reg:DI 5 di)
+        (reg/f:DI 93)) "factorial.cpp":14:10 74 {*movdi_internal}
+     (expr_list:REG_DEAD (reg/f:DI 93)
+        (expr_list:REG_EQUAL (symbol_ref:DI ("_ZSt4cout") [flags 0x40]  <var_decl 0x7f584a229ea0 cout>)
+            (nil))))
+(call_insn 33 32 34 7 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x7f584a4e3500 operator<<>) [0 operator<< S1 A8])
+            (const_int 0 [0]))) "factorial.cpp":14:10 824 {*call_value}
+     (expr_list:REG_DEAD (reg:DI 5 di)
+        (expr_list:REG_DEAD (reg:SI 4 si)
+            (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x7f584a4e3500 operator<<>)
+                (nil))))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 34 33 35 7 (set (reg/f:DI 85 [ _8 ])
+        (reg:DI 0 ax)) "factorial.cpp":14:10 74 {*movdi_internal}
+     (expr_list:REG_DEAD (reg:DI 0 ax)
+        (nil)))
+(insn 35 34 37 7 (set (reg:DI 95)
+        (mem/u/c:DI (const:DI (unspec:DI [
+                        (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_") [flags 0x41]  <function_decl 0x7f584a4f6600 endl>)
+                    ] UNSPEC_GOTPCREL)) [25  S8 A8])) "factorial.cpp":14:15 74 {*movdi_internal}
+     (nil))
+(insn 37 35 38 7 (set (reg:DI 4 si)
+        (reg:DI 95)) "factorial.cpp":14:15 74 {*movdi_internal}
+     (expr_list:REG_DEAD (reg:DI 95)
+        (expr_list:REG_EQUAL (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_") [flags 0x41]  <function_decl 0x7f584a4f6600 endl>)
+            (nil))))
+(insn 38 37 39 7 (set (reg:DI 5 di)
+        (reg/f:DI 85 [ _8 ])) "factorial.cpp":14:15 74 {*movdi_internal}
+     (expr_list:REG_DEAD (reg/f:DI 85 [ _8 ])
+        (nil)))
+(call_insn 39 38 45 7 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZNSolsEPFRSoS_E") [flags 0x41]  <function_decl 0x7f584a4d3000 operator<<>) [0 operator<< S1 A8])
+            (const_int 0 [0]))) "factorial.cpp":14:15 824 {*call_value}
+     (expr_list:REG_DEAD (reg:DI 5 di)
+        (expr_list:REG_DEAD (reg:DI 4 si)
+            (expr_list:REG_UNUSED (reg:DI 0 ax)
+                (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSolsEPFRSoS_E") [flags 0x41]  <function_decl 0x7f584a4d3000 operator<<>)
+                    (nil)))))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 45 39 46 7 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                                (const_int -8 [0xfffffffffffffff8])) [14 D.49887+0 S8 A64])
+                        (mem/v/f:DI (const_int 40 [0x28]) [9 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "factorial.cpp":16:1 1164 {stack_protect_test_1_di}
+     (nil))
+(jump_insn 46 45 58 7 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 49)
+            (pc))) "factorial.cpp":16:1 806 {*jcc}
+     (expr_list:REG_DEAD (reg:CCZ 17 flags)
+        (int_list:REG_BR_PROB 1073312332 (nil)))
+ -> 49)
+(note 58 46 47 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(call_insn 47 58 49 8 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f5849e6f000 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "factorial.cpp":16:1 813 {*call}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f5849e6f000 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(code_label 49 47 59 9 7 (nil) [1 uses])
+(note 59 49 50 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 50 59 51 9 (set (reg/i:SI 0 ax)
+        (const_int 0 [0])) "factorial.cpp":16:1 75 {*movsi_internal}
+     (nil))
+(insn 51 50 0 9 (use (reg/i:SI 0 ax)) "factorial.cpp":16:1 -1
+     (nil))
+
+;; Function _GLOBAL__sub_I_main (_GLOBAL__sub_I_main, funcdef_no=2279, decl_uid=49810, cgraph_uid=1013, symbol_order=1188) (executed once)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 3 n_edges 2 count 3 (    1)
+Searching for mode conversion candidates...
+There are no candidates for optimization.
+Total insns converted: 0
+starting the processing of deferred insns
+ending the processing of deferred insns
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+_GLOBAL__sub_I_main
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp] 16 [argp] 19 [frame]
+;;  regular block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 16 [argp] 19 [frame] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 36 [r8] 37 [r9]
+;;  exit block uses 	 6 [bp] 7 [sp] 19 [frame]
+;;  regs ever live 	 7 [sp]
+;;  ref usage 	r0={2d} r1={2d} r2={2d} r4={2d} r5={2d} r6={1d,2u} r7={1d,3u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r16={1d,1u} r17={1d} r18={1d} r19={1d,2u} r20={2d} r21={2d} r22={2d} r23={2d} r24={2d} r25={2d} r26={2d} r27={2d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={2d} r37={2d} r38={1d} r39={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} 
+;;    total ref usage 94{86d,8u,0e} in 1{0 regular + 1 call} insns.
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(call_insn/j 5 2 0 2 (call (mem:QI (symbol_ref:DI ("_Z41__static_initialization_and_destruction_0ii.constprop.0") [flags 0x3]  <function_decl 0x7f5849e4a400 __static_initialization_and_destruction_0.constprop>) [0 __static_initialization_and_destruction_0.constprop S1 A8])
+        (const_int 0 [0])) "factorial.cpp":16:1 817 {*sibcall}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_Z41__static_initialization_and_destruction_0ii.constprop.0") [flags 0x3]  <function_decl 0x7f5849e4a400 __static_initialization_and_destruction_0.constprop>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
