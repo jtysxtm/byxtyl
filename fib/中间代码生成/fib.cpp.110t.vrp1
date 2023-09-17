@@ -1,0 +1,138 @@
+
+;; Function __static_initialization_and_destruction_0.constprop (_Z41__static_initialization_and_destruction_0ii.constprop.0, funcdef_no=2280, decl_uid=49874, cgraph_uid=1024, symbol_order=1202) (executed once)
+
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+
+Value ranges after VRP:
+
+
+
+void __static_initialization_and_destruction_0.constprop ()
+{
+  int __initialize_p;
+  int __priority;
+
+  <bb 2> [local count: 1073741824]:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxxabiv1::__cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+  return;
+
+}
+
+
+
+;; Function main (main, funcdef_no=1778, decl_uid=44906, cgraph_uid=512, symbol_order=542) (executed once)
+
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5
+;;
+;; Loop 1
+;;  header 4, latch 3
+;;  depth 1, outer 0
+;;  nodes: 4 3
+;; 2 succs { 4 }
+;; 3 succs { 4 }
+;; 4 succs { 3 5 }
+;; 5 succs { 1 }
+
+SSA replacement table
+N_i -> { O_1 ... O_j } means that N_i replaces O_1, ..., O_j
+
+i_20 -> { i_4 }
+Incremental SSA update started at block: 4
+Number of blocks in CFG: 6
+Number of blocks to update: 2 ( 33%)
+
+
+
+Value ranges after VRP:
+
+n.0_1: int VARYING
+a_2: int [0, +INF]
+b_3: int [1, +INF]
+i_4: int [1, +INF]
+.MEM_5: <<< error >>> VARYING
+_9: struct basic_ostream & VARYING
+_12: struct basic_ostream & VARYING
+b_15: int [1, +INF]
+_17: struct basic_ostream & VARYING
+i_19: int [2, +INF]
+i_20: int [-INF, n.0_1 + -1]  EQUIVALENCES: { i_4 } (1 elements)
+
+
+int main ()
+{
+  int n;
+  int i;
+  int b;
+  int a;
+  int n.0_1;
+  struct basic_ostream & _9;
+  struct basic_ostream & _12;
+  struct basic_ostream & _17;
+
+  <bb 2> [local count: 118111600]:
+  std::basic_istream<char>::operator>> (&cin, &n);
+  _9 = std::basic_ostream<char>::operator<< (&cout, 0);
+  std::basic_ostream<char>::operator<< (_9, endl);
+  _12 = std::basic_ostream<char>::operator<< (&cout, 1);
+  std::basic_ostream<char>::operator<< (_12, endl);
+  goto <bb 4>; [100.00%]
+
+  <bb 3> [local count: 955630225]:
+  b_15 = a_2 + b_3;
+  _17 = std::basic_ostream<char>::operator<< (&cout, b_15);
+  std::basic_ostream<char>::operator<< (_17, endl);
+  i_19 = i_4 + 1;
+
+  <bb 4> [local count: 1073741824]:
+  # a_2 = PHI <0(2), b_3(3)>
+  # b_3 = PHI <1(2), b_15(3)>
+  # i_4 = PHI <1(2), i_19(3)>
+  n.0_1 = n;
+  if (n.0_1 > i_4)
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 5>; [11.00%]
+
+  <bb 5> [local count: 118111600]:
+  n ={v} {CLOBBER};
+  return 0;
+
+}
+
+
+
+;; Function _GLOBAL__sub_I_main (_GLOBAL__sub_I_main, funcdef_no=2279, decl_uid=49812, cgraph_uid=1013, symbol_order=1188) (executed once)
+
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+
+Value ranges after VRP:
+
+
+
+void _GLOBAL__sub_I_main ()
+{
+  <bb 2> [local count: 1073741824]:
+  __static_initialization_and_destruction_0.constprop ();
+  return;
+
+}
+
+

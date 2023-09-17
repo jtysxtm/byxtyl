@@ -1,0 +1,112 @@
+
+;; Function __static_initialization_and_destruction_0.constprop (_Z41__static_initialization_and_destruction_0ii.constprop.0, funcdef_no=2280, decl_uid=49874, cgraph_uid=1024, symbol_order=1202) (executed once)
+
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+void __static_initialization_and_destruction_0.constprop ()
+{
+  int __initialize_p;
+  int __priority;
+
+  <bb 2> [local count: 1073741824]:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxxabiv1::__cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+  return;
+
+}
+
+
+
+;; Function main (main, funcdef_no=1778, decl_uid=44906, cgraph_uid=512, symbol_order=542) (executed once)
+
+Created preheader block for loop 1
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 5 3 6 4
+;;
+;; Loop 1
+;;  header 3, latch 6
+;;  depth 1, outer 0
+;;  nodes: 3 6
+;; 2 succs { 5 4 }
+;; 5 succs { 3 }
+;; 3 succs { 6 4 }
+;; 6 succs { 3 }
+;; 4 succs { 1 }
+int main ()
+{
+  int n;
+  int i;
+  int b;
+  int a;
+  int n.0_1;
+  struct basic_ostream & _9;
+  struct basic_ostream & _12;
+  struct basic_ostream & _17;
+  int n.0_24;
+
+  <bb 2> [local count: 118111600]:
+  std::basic_istream<char>::operator>> (&cin, &n);
+  _9 = std::basic_ostream<char>::operator<< (&cout, 0);
+  std::basic_ostream<char>::operator<< (_9, endl);
+  _12 = std::basic_ostream<char>::operator<< (&cout, 1);
+  std::basic_ostream<char>::operator<< (_12, endl);
+  n.0_24 = n;
+  if (n.0_24 > 1)
+    goto <bb 5>; [89.00%]
+  else
+    goto <bb 4>; [11.00%]
+
+  <bb 5> [local count: 105119324]:
+
+  <bb 3> [local count: 955630225]:
+  # a_25 = PHI <b_26(6), 0(5)>
+  # b_26 = PHI <b_15(6), 1(5)>
+  # i_27 = PHI <i_19(6), 1(5)>
+  b_15 = a_25 + b_26;
+  _17 = std::basic_ostream<char>::operator<< (&cout, b_15);
+  std::basic_ostream<char>::operator<< (_17, endl);
+  i_19 = i_27 + 1;
+  n.0_1 = n;
+  if (n.0_1 > i_19)
+    goto <bb 6>; [89.00%]
+  else
+    goto <bb 4>; [11.00%]
+
+  <bb 6> [local count: 850510901]:
+  goto <bb 3>; [100.00%]
+
+  <bb 4> [local count: 118111600]:
+  n ={v} {CLOBBER};
+  return 0;
+
+}
+
+
+
+;; Function _GLOBAL__sub_I_main (_GLOBAL__sub_I_main, funcdef_no=2279, decl_uid=49812, cgraph_uid=1013, symbol_order=1188) (executed once)
+
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+void _GLOBAL__sub_I_main ()
+{
+  <bb 2> [local count: 1073741824]:
+  __static_initialization_and_destruction_0.constprop ();
+  return;
+
+}
+
+

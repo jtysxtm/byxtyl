@@ -1,0 +1,50 @@
+
+;; Function main (main, funcdef_no=1778, decl_uid=44906, cgraph_uid=512, symbol_order=542) (executed once)
+
+Removing basic block 5
+Removing basic block 6
+int main ()
+{
+  int n;
+  int i;
+  int b;
+  int a;
+  int n.0_1;
+  struct basic_ostream & _9;
+  struct basic_ostream & _12;
+  struct basic_ostream & _17;
+  int n.0_24;
+
+  <bb 2> [local count: 118111600]:
+  std::basic_istream<char>::operator>> (&cin, &n);
+  _9 = std::basic_ostream<char>::operator<< (&cout, 0);
+  std::basic_ostream<char>::operator<< (_9, endl);
+  _12 = std::basic_ostream<char>::operator<< (&cout, 1);
+  std::basic_ostream<char>::operator<< (_12, endl);
+  n.0_24 = n;
+  if (n.0_24 > 1)
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 4>; [11.00%]
+
+  <bb 3> [local count: 955630225]:
+  # a_25 = PHI <b_26(3), 0(2)>
+  # b_26 = PHI <b_15(3), 1(2)>
+  # i_27 = PHI <i_19(3), 1(2)>
+  b_15 = a_25 + b_26;
+  _17 = std::basic_ostream<char>::operator<< (&cout, b_15);
+  std::basic_ostream<char>::operator<< (_17, endl);
+  i_19 = i_27 + 1;
+  n.0_1 = n;
+  if (n.0_1 > i_19)
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 4>; [11.00%]
+
+  <bb 4> [local count: 118111600]:
+  n ={v} {CLOBBER};
+  return 0;
+
+}
+
+
