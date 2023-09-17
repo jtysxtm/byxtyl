@@ -1,0 +1,5 @@
+
+fib_arm.o：     文件格式 elf32-little
+
+objdump: can't disassemble for architecture UNKNOWN!
+
