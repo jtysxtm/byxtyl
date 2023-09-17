@@ -1,0 +1,235 @@
+
+;; Function std::basic_ostream<char>::operator<< (_ZNSolsEPFRSoS_E, funcdef_no=2040, decl_uid=42120, cgraph_uid=774, symbol_order=807)
+
+struct __ostream_type & std::basic_ostream<char>::operator<< (struct basic_ostream * const this, struct __ostream_type & (*<T65a7>) (struct __ostream_type &) __pf)
+{
+  struct __ostream_type & _6;
+
+  <bb 2> :
+  _6 = __pf_2(D) (this_4(D));
+  return _6;
+
+}
+
+
+
+;; Function std::flush<char, std::char_traits<char> > (_ZSt5flushIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_, funcdef_no=2119, decl_uid=42340, cgraph_uid=853, symbol_order=886)
+
+struct basic_ostream & std::flush<char, std::char_traits<char> > (struct basic_ostream & __os)
+{
+  struct basic_ostream & _4;
+
+  <bb 2> :
+  _4 = std::basic_ostream<char>::flush (__os_2(D));
+  return _4;
+
+}
+
+
+
+;; Function __static_initialization_and_destruction_0 (_Z41__static_initialization_and_destruction_0ii, funcdef_no=2278, decl_uid=49804, cgraph_uid=1012, symbol_order=1069)
+
+void __static_initialization_and_destruction_0 (int __initialize_p, int __priority)
+{
+  <bb 2> :
+  if (__initialize_p_2(D) == 1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  if (__priority_4(D) == 65535)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  std::ios_base::Init::Init (&__ioinit);
+  __cxxabiv1::__cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+
+  <bb 5> :
+  return;
+
+}
+
+
+
+;; Function std::ctype<char>::widen (_ZNKSt5ctypeIcE5widenEc, funcdef_no=1526, decl_uid=37816, cgraph_uid=497, symbol_order=526)
+
+char_type std::ctype<char>::widen (const struct ctype * const this, char __c)
+{
+  char _1;
+  unsigned char __c.1_2;
+  int _3;
+  int (*) () * _4;
+  int (*) () _6;
+  int _7;
+  char_type _8;
+  char_type _15;
+  char_type _17;
+
+  <bb 2> :
+  _1 = this_11(D)->_M_widen_ok;
+  if (_1 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  __c.1_2 = (unsigned char) __c_13(D);
+  _3 = (int) __c.1_2;
+  _17 = this_11(D)->_M_widen[_3];
+  // predicted unlikely by early return (on trees) predictor.
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  std::ctype<char>::_M_widen_init (this_11(D));
+  _4 = this_11(D)->D.37930._vptr.facet;
+  _6 = MEM[(int (*) () *)_4 + 48B];
+  _7 = (int) __c_13(D);
+  _15 = OBJ_TYPE_REF(_6;(const struct ctype)this_11(D)->6) (this_11(D), _7);
+
+  <bb 5> :
+  # _8 = PHI <_17(3), _15(4)>
+  return _8;
+
+}
+
+
+
+;; Function std::ctype<char>::do_widen (_ZNKSt5ctypeIcE8do_widenEc, funcdef_no=1531, decl_uid=37864, cgraph_uid=502, symbol_order=531)
+
+char_type std::ctype<char>::do_widen (const struct ctype * const this, char __c)
+{
+  <bb 2> :
+  return __c_1(D);
+
+}
+
+
+
+;; Function main (main, funcdef_no=1778, decl_uid=44906, cgraph_uid=512, symbol_order=542)
+
+int main ()
+{
+  int f;
+  int n;
+  int i;
+  int n.0_1;
+  struct basic_ostream & _11;
+
+  <bb 2> :
+  std::basic_istream<char>::operator>> (&cin, &n);
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  f_15 = i_3 * f_4;
+  i_16 = i_3 + 1;
+
+  <bb 4> :
+  # i_3 = PHI <2(2), i_16(3)>
+  # f_4 = PHI <1(2), f_15(3)>
+  n.0_1 = n;
+  if (n.0_1 >= i_3)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  _11 = std::basic_ostream<char>::operator<< (&cout, f_4);
+
+  <bb 6> :
+  std::basic_ostream<char>::operator<< (_11, endl);
+
+  <bb 7> :
+  n ={v} {CLOBBER};
+  return 0;
+
+  <bb 8> :
+<L5>:
+  n ={v} {CLOBBER};
+  resx 1
+
+}
+
+
+
+;; Function std::__check_facet<std::ctype<char> > (_ZSt13__check_facetISt5ctypeIcEERKT_PS3_, funcdef_no=2154, decl_uid=48103, cgraph_uid=888, symbol_order=921)
+
+const struct ctype & std::__check_facet<std::ctype<char> > (const struct ctype * __f)
+{
+  <bb 2> :
+  if (__f_1(D) == 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  std::__throw_bad_cast ();
+
+  <bb 4> :
+  return __f_1(D);
+
+}
+
+
+
+;; Function std::basic_ios<char>::widen (_ZNKSt9basic_iosIcSt11char_traitsIcEE5widenEc, funcdef_no=2118, decl_uid=41378, cgraph_uid=852, symbol_order=885)
+
+char_type std::basic_ios<char>::widen (const struct basic_ios * const this, char __c)
+{
+  const struct __ctype_type * _1;
+  int _3;
+  const struct ctype & _7;
+  char_type _10;
+
+  <bb 2> :
+  _1 = this_5(D)->_M_ctype;
+  _7 = std::__check_facet<std::ctype<char> > (_1);
+  _3 = (int) __c_8(D);
+  _10 = std::ctype<char>::widen (_7, _3);
+  return _10;
+
+}
+
+
+
+;; Function std::endl<char, std::char_traits<char> > (_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_, funcdef_no=2039, decl_uid=42332, cgraph_uid=773, symbol_order=806)
+
+struct basic_ostream & std::endl<char, std::char_traits<char> > (struct basic_ostream & __os)
+{
+  int (*) () * _1;
+  long int _3;
+  sizetype _4;
+  struct basic_ios * _5;
+  int _7;
+  char _12;
+  struct basic_ostream & _14;
+  struct basic_ostream & _16;
+
+  <bb 2> :
+  _1 = __os_10(D)->_vptr.basic_ostream;
+  _3 = MEM[(long int *)_1 + -24B];
+  _4 = (sizetype) _3;
+  _5 = __os_10(D) + _4;
+  _12 = std::basic_ios<char>::widen (_5, 10);
+  _7 = (int) _12;
+  _14 = std::basic_ostream<char>::put (__os_10(D), _7);
+  _16 = std::flush<char, std::char_traits<char> > (_14);
+  return _16;
+
+}
+
+
+
+;; Function _GLOBAL__sub_I_main (_GLOBAL__sub_I_main, funcdef_no=2279, decl_uid=49810, cgraph_uid=1013, symbol_order=1188)
+
+void _GLOBAL__sub_I_main ()
+{
+  <bb 2> :
+  __static_initialization_and_destruction_0 (1, 65535);
+  return;
+
+}
+
+
