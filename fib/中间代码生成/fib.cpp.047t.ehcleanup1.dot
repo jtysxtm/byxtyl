@@ -1,0 +1,59 @@
+digraph "fib.cpp.047t.ehcleanup1" {
+overlap=false;
+subgraph "cluster_main" {
+	style="dashed";
+	color="black";
+	label="main ()";
+	subgraph cluster_1778_1 {
+	style="filled";
+	color="darkgreen";
+	fillcolor="grey88";
+	label="loop 1";
+	labeljust=l;
+	penwidth=2;
+	fn_1778_basic_block_4 [shape=record,style=filled,fillcolor=lightgrey,label="{\<bb\ 4\>:\l\
+|#\ a_5\ =\ PHI\ \<0(2),\ b_6(3)\>\l\
+|#\ b_6\ =\ PHI\ \<1(2),\ b_24(3)\>\l\
+|#\ i_7\ =\ PHI\ \<1(2),\ i_29(3)\>\l\
+|n.0_4\ =\ n;\l\
+|if\ (n.0_4\ \>\ i_7)\l\
+\ \ goto\ \<bb\ 3\>;\ [INV]\l\
+else\l\
+\ \ goto\ \<bb\ 5\>;\ [INV]\l\
+}"];
+
+	fn_1778_basic_block_3 [shape=record,style=filled,fillcolor=lightgrey,label="{\<bb\ 3\>:\l\
+|b_24\ =\ a_5\ +\ b_6;\l\
+|_26\ =\ std::basic_ostream\<char\>::operator\<\<\ (&cout,\ b_24);\l\
+|std::basic_ostream\<char\>::operator\<\<\ (_26,\ endl);\l\
+|i_29\ =\ i_7\ +\ 1;\l\
+}"];
+
+	}
+	fn_1778_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_1778_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_1778_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{\<bb\ 2\>:\l\
+|std::basic_istream\<char\>::operator\>\>\ (&cin,\ &n);\l\
+|_16\ =\ std::basic_ostream\<char\>::operator\<\<\ (&cout,\ 0);\l\
+|std::basic_ostream\<char\>::operator\<\<\ (_16,\ endl);\l\
+|_19\ =\ std::basic_ostream\<char\>::operator\<\<\ (&cout,\ 1);\l\
+|std::basic_ostream\<char\>::operator\<\<\ (_19,\ endl);\l\
+goto\ \<bb\ 4\>;\ [INV]\l\
+}"];
+
+	fn_1778_basic_block_5 [shape=record,style=filled,fillcolor=lightgrey,label="{\<bb\ 5\>:\l\
+|n\ =\{v\}\ \{CLOBBER\};\l\
+|return\ 0;\l\
+}"];
+
+	fn_1778_basic_block_0:s -> fn_1778_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true];
+	fn_1778_basic_block_2:s -> fn_1778_basic_block_4:n [style="solid,bold",color=blue,weight=100,constraint=true];
+	fn_1778_basic_block_3:s -> fn_1778_basic_block_4:n [style="dotted,bold",color=blue,weight=10,constraint=false];
+	fn_1778_basic_block_4:s -> fn_1778_basic_block_3:n [style="solid,bold",color=black,weight=10,constraint=true];
+	fn_1778_basic_block_4:s -> fn_1778_basic_block_5:n [style="solid,bold",color=black,weight=10,constraint=true];
+	fn_1778_basic_block_5:s -> fn_1778_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true];
+	fn_1778_basic_block_0:s -> fn_1778_basic_block_1:n [style="invis",constraint=true];
+}
+}
