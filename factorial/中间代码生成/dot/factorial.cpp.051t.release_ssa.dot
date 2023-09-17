@@ -1,0 +1,279 @@
+digraph "factorial.cpp.051t.release_ssa" {
+overlap=false;
+subgraph "cluster_std::basic_ostream<char>::operator<<" {
+	style="dashed";
+	color="black";
+	label="std::basic_ostream<char>::operator<< ()";
+	fn_2040_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_2040_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_2040_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1073741824\<bb\ 2\>:\l\
+|_5\ =\ __pf_1(D)\ (this_3(D));\l\
+|return\ _5;\l\
+}"];
+
+	fn_2040_basic_block_0:s -> fn_2040_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_2040_basic_block_2:s -> fn_2040_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_2040_basic_block_0:s -> fn_2040_basic_block_1:n [style="invis",constraint=true];
+}
+subgraph "cluster_std::flush<char, std::char_traits<char> >" {
+	style="dashed";
+	color="black";
+	label="std::flush<char, std::char_traits<char> > ()";
+	fn_2119_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_2119_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_2119_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1073741824\<bb\ 2\>:\l\
+|_4\ =\ std::basic_ostream\<char\>::flush\ (__os_2(D));\l\
+|return\ _4;\l\
+}"];
+
+	fn_2119_basic_block_0:s -> fn_2119_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_2119_basic_block_2:s -> fn_2119_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_2119_basic_block_0:s -> fn_2119_basic_block_1:n [style="invis",constraint=true];
+}
+subgraph "cluster___static_initialization_and_destruction_0" {
+	style="dashed";
+	color="black";
+	label="__static_initialization_and_destruction_0 ()";
+	fn_2278_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_2278_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_2278_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1073741823\<bb\ 2\>:\l\
+|if\ (__initialize_p_2(D)\ ==\ 1)\l\
+\ \ goto\ \<bb\ 3\>;\ [34.00%]\l\
+else\l\
+\ \ goto\ \<bb\ 5\>;\ [66.00%]\l\
+}"];
+
+	fn_2278_basic_block_3 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:365072224\<bb\ 3\>:\l\
+|if\ (__priority_4(D)\ ==\ 65535)\l\
+\ \ goto\ \<bb\ 4\>;\ [20.24%]\l\
+else\l\
+\ \ goto\ \<bb\ 5\>;\ [79.76%]\l\
+}"];
+
+	fn_2278_basic_block_4 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:73890618\<bb\ 4\>:\l\
+|std::ios_base::Init::Init\ (&__ioinit);\l\
+|__cxxabiv1::__cxa_atexit\ (__dt_comp\ ,\ &__ioinit,\ &__dso_handle);\l\
+}"];
+
+	fn_2278_basic_block_5 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1073741824\<bb\ 5\>:\l\
+|return;\l\
+}"];
+
+	fn_2278_basic_block_0:s -> fn_2278_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_2278_basic_block_2:s -> fn_2278_basic_block_3:n [style="solid,bold",color=black,weight=10,constraint=true,label="[34%]"];
+	fn_2278_basic_block_2:s -> fn_2278_basic_block_5:n [style="solid,bold",color=black,weight=10,constraint=true,label="[66%]"];
+	fn_2278_basic_block_3:s -> fn_2278_basic_block_4:n [style="solid,bold",color=black,weight=10,constraint=true,label="[20%]"];
+	fn_2278_basic_block_3:s -> fn_2278_basic_block_5:n [style="solid,bold",color=black,weight=10,constraint=true,label="[79%]"];
+	fn_2278_basic_block_4:s -> fn_2278_basic_block_5:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_2278_basic_block_5:s -> fn_2278_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_2278_basic_block_0:s -> fn_2278_basic_block_1:n [style="invis",constraint=true];
+}
+subgraph "cluster_std::ctype<char>::widen" {
+	style="dashed";
+	color="black";
+	label="std::ctype<char>::widen ()";
+	fn_1526_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_1526_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_1526_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1073741824\<bb\ 2\>:\l\
+|_1\ =\ this_10(D)-\>_M_widen_ok;\l\
+|if\ (_1\ !=\ 0)\l\
+\ \ goto\ \<bb\ 3\>;\ [51.12%]\l\
+else\l\
+\ \ goto\ \<bb\ 4\>;\ [48.88%]\l\
+}"];
+
+	fn_1526_basic_block_3 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:548896825\<bb\ 3\>:\l\
+|__c.1_2\ =\ (unsigned\ char)\ __c_12(D);\l\
+|_3\ =\ (int)\ __c.1_2;\l\
+|_15\ =\ this_10(D)-\>_M_widen[_3];\l\
+goto\ \<bb\ 5\>;\ [100.00%]\l\
+}"];
+
+	fn_1526_basic_block_4 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:524845000\<bb\ 4\>:\l\
+|std::ctype\<char\>::_M_widen_init\ (this_10(D));\l\
+|_4\ =\ this_10(D)-\>D.37930._vptr.facet;\l\
+|_5\ =\ MEM[(int\ (*)\ ()\ *)_4\ +\ 48B];\l\
+|_6\ =\ (int)\ __c_12(D);\l\
+|_14\ =\ OBJ_TYPE_REF(_5;(const\ struct\ ctype)this_10(D)-\>6)\ (this_10(D),\ _6);\l\
+}"];
+
+	fn_1526_basic_block_5 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1073741824\<bb\ 5\>:\l\
+|#\ _7\ =\ PHI\ \<_15(3),\ _14(4)\>\l\
+|return\ _7;\l\
+}"];
+
+	fn_1526_basic_block_0:s -> fn_1526_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_1526_basic_block_2:s -> fn_1526_basic_block_3:n [style="solid,bold",color=black,weight=10,constraint=true,label="[51%]"];
+	fn_1526_basic_block_2:s -> fn_1526_basic_block_4:n [style="solid,bold",color=black,weight=10,constraint=true,label="[48%]"];
+	fn_1526_basic_block_3:s -> fn_1526_basic_block_5:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_1526_basic_block_4:s -> fn_1526_basic_block_5:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_1526_basic_block_5:s -> fn_1526_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_1526_basic_block_0:s -> fn_1526_basic_block_1:n [style="invis",constraint=true];
+}
+subgraph "cluster_std::ctype<char>::do_widen" {
+	style="dashed";
+	color="black";
+	label="std::ctype<char>::do_widen ()";
+	fn_1531_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_1531_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_1531_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1073741824\<bb\ 2\>:\l\
+|return\ __c_1(D);\l\
+}"];
+
+	fn_1531_basic_block_0:s -> fn_1531_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_1531_basic_block_2:s -> fn_1531_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_1531_basic_block_0:s -> fn_1531_basic_block_1:n [style="invis",constraint=true];
+}
+subgraph "cluster_main" {
+	style="dashed";
+	color="black";
+	label="main ()";
+	subgraph cluster_1778_1 {
+	style="filled";
+	color="darkgreen";
+	fillcolor="grey88";
+	label="loop 1";
+	labeljust=l;
+	penwidth=2;
+	fn_1778_basic_block_4 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1073741824\<bb\ 4\>:\l\
+|#\ i_2\ =\ PHI\ \<2(2),\ i_12(3)\>\l\
+|#\ f_3\ =\ PHI\ \<1(2),\ f_11(3)\>\l\
+|n.0_1\ =\ n;\l\
+|if\ (n.0_1\ \>=\ i_2)\l\
+\ \ goto\ \<bb\ 3\>;\ [89.00%]\l\
+else\l\
+\ \ goto\ \<bb\ 5\>;\ [11.00%]\l\
+}"];
+
+	fn_1778_basic_block_3 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:955630225\<bb\ 3\>:\l\
+|f_11\ =\ i_2\ *\ f_3;\l\
+|i_12\ =\ i_2\ +\ 1;\l\
+}"];
+
+	}
+	fn_1778_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_1778_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_1778_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:118111600\<bb\ 2\>:\l\
+|std::basic_istream\<char\>::operator\>\>\ (&cin,\ &n);\l\
+goto\ \<bb\ 4\>;\ [100.00%]\l\
+}"];
+
+	fn_1778_basic_block_5 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:118111600\<bb\ 5\>:\l\
+|#\ f_6\ =\ PHI\ \<f_3(4)\>\l\
+|_8\ =\ std::basic_ostream\<char\>::operator\<\<\ (&cout,\ f_6);\l\
+|std::basic_ostream\<char\>::operator\<\<\ (_8,\ endl);\l\
+|n\ =\{v\}\ \{CLOBBER\};\l\
+|return\ 0;\l\
+}"];
+
+	fn_1778_basic_block_0:s -> fn_1778_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_1778_basic_block_2:s -> fn_1778_basic_block_4:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_1778_basic_block_3:s -> fn_1778_basic_block_4:n [style="dotted,bold",color=blue,weight=10,constraint=false,label="[100%]"];
+	fn_1778_basic_block_4:s -> fn_1778_basic_block_3:n [style="solid,bold",color=black,weight=10,constraint=true,label="[89%]"];
+	fn_1778_basic_block_4:s -> fn_1778_basic_block_5:n [style="solid,bold",color=black,weight=10,constraint=true,label="[11%]"];
+	fn_1778_basic_block_5:s -> fn_1778_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_1778_basic_block_0:s -> fn_1778_basic_block_1:n [style="invis",constraint=true];
+}
+subgraph "cluster_std::__check_facet<std::ctype<char> >" {
+	style="dashed";
+	color="black";
+	label="std::__check_facet<std::ctype<char> > ()";
+	fn_2154_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_2154_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_2154_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1073741824\<bb\ 2\>:\l\
+|if\ (__f_1(D)\ ==\ 0B)\l\
+\ \ goto\ \<bb\ 3\>;\ [0.04%]\l\
+else\l\
+\ \ goto\ \<bb\ 4\>;\ [99.96%]\l\
+}"];
+
+	fn_2154_basic_block_3 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:429496\<bb\ 3\>:\l\
+|std::__throw_bad_cast\ ();\l\
+}"];
+
+	fn_2154_basic_block_4 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1073312329\<bb\ 4\>:\l\
+|return\ __f_1(D);\l\
+}"];
+
+	fn_2154_basic_block_0:s -> fn_2154_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_2154_basic_block_2:s -> fn_2154_basic_block_3:n [style="solid,bold",color=black,weight=10,constraint=true,label="[0%]"];
+	fn_2154_basic_block_2:s -> fn_2154_basic_block_4:n [style="solid,bold",color=black,weight=10,constraint=true,label="[99%]"];
+	fn_2154_basic_block_4:s -> fn_2154_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_2154_basic_block_0:s -> fn_2154_basic_block_1:n [style="invis",constraint=true];
+}
+subgraph "cluster_std::basic_ios<char>::widen" {
+	style="dashed";
+	color="black";
+	label="std::basic_ios<char>::widen ()";
+	fn_2118_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_2118_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_2118_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1073741824\<bb\ 2\>:\l\
+|_1\ =\ this_4(D)-\>_M_ctype;\l\
+|_6\ =\ std::__check_facet\<std::ctype\<char\>\ \>\ (_1);\l\
+|_2\ =\ (int)\ __c_7(D);\l\
+|_9\ =\ std::ctype\<char\>::widen\ (_6,\ _2);\l\
+|return\ _9;\l\
+}"];
+
+	fn_2118_basic_block_0:s -> fn_2118_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_2118_basic_block_2:s -> fn_2118_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_2118_basic_block_0:s -> fn_2118_basic_block_1:n [style="invis",constraint=true];
+}
+subgraph "cluster_std::endl<char, std::char_traits<char> >" {
+	style="dashed";
+	color="black";
+	label="std::endl<char, std::char_traits<char> > ()";
+	fn_2039_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_2039_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_2039_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1073741824\<bb\ 2\>:\l\
+|_1\ =\ __os_7(D)-\>_vptr.basic_ostream;\l\
+|_2\ =\ MEM[(long\ int\ *)_1\ +\ -24B];\l\
+|_3\ =\ (sizetype)\ _2;\l\
+|_4\ =\ __os_7(D)\ +\ _3;\l\
+|_9\ =\ std::basic_ios\<char\>::widen\ (_4,\ 10);\l\
+|_5\ =\ (int)\ _9;\l\
+|_11\ =\ std::basic_ostream\<char\>::put\ (__os_7(D),\ _5);\l\
+|_13\ =\ std::flush\<char,\ std::char_traits\<char\>\ \>\ (_11);\l\
+|return\ _13;\l\
+}"];
+
+	fn_2039_basic_block_0:s -> fn_2039_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_2039_basic_block_2:s -> fn_2039_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_2039_basic_block_0:s -> fn_2039_basic_block_1:n [style="invis",constraint=true];
+}
+subgraph "cluster__GLOBAL__sub_I_main" {
+	style="dashed";
+	color="black";
+	label="_GLOBAL__sub_I_main ()";
+	fn_2279_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_2279_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_2279_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1073741824\<bb\ 2\>:\l\
+|__static_initialization_and_destruction_0\ (1,\ 65535);\l\
+|return;\l\
+}"];
+
+	fn_2279_basic_block_0:s -> fn_2279_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_2279_basic_block_2:s -> fn_2279_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_2279_basic_block_0:s -> fn_2279_basic_block_1:n [style="invis",constraint=true];
+}
+}
